@@ -1,0 +1,12 @@
+[Unit]
+Description=keystone Identity API server
+After=network.target
+
+[Service]
+Restart=always
+RestartSec=3
+ExecStart=/usr/bin/keystone-all
+User=keystone
+
+[Install]
+WantedBy=multi-user.target
